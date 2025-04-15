@@ -29,7 +29,7 @@ Via AWS Console or CLI:
 ```bash
 aws lambda update-function-configuration \
   --function-name YOUR_FUNCTION_NAME \
-  --layers arn:aws:lambda:ap-southeast-2:503687392860:layer:icecache:1
+  --layers arn:aws:lambda:ap-southeast-2:503687392860:layer:icecache:2
 ```
 
 ---
@@ -49,8 +49,8 @@ This tells AWS Lambda to run `icecache` before your handler, automatically manag
 ### 3. Set Required Environment Variables
 
 ```bash
-S3_BUCKET=your-bucket-name
-S3_PREFIX=lambda-cache
+S3_BUCKET_ICECACHE=your-bucket-name
+S3_PREFIX_ICECACHE=lambda-cache
 ```
 
 ---
@@ -66,7 +66,7 @@ Ensure your Lambda function has the following IAM permissions:
     "s3:GetObject",
     "s3:PutObject"
   ],
-  "Resource": "arn:aws:s3:::your-bucket-name/lambda-cache/*"
+  "Resource": "arn:aws:s3:::your-bucket-name/<prefix>/*"
 }
 ```
 

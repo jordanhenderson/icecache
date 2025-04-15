@@ -23,8 +23,8 @@ import (
 
 var (
 	s3Client       *s3.Client
-	s3Bucket       = os.Getenv("S3_BUCKET")
-	s3Prefix       = os.Getenv("S3_PREFIX")
+	s3Bucket       = os.Getenv("S3_BUCKET_ICECACHE")
+	s3Prefix       = os.Getenv("S3_PREFIX_ICECACHE")
 	basePath       = "/tmp"
 	restoreFileKey = fmt.Sprintf("%s/%s.zst", s3Prefix, os.Getenv("AWS_LAMBDA_FUNCTION_NAME"))
 

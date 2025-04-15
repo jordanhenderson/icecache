@@ -109,5 +109,5 @@ During execution:
 
 ---
 
-Need Terraform, SAM/CDK modules, or CI setup? Just ask! 🐧
+Need Terraform, SAM/CDK modules, or CI setup? Let me know @ jordan-henderson@outlook.com
 
